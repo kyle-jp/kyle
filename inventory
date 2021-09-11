@@ -1,7 +1,9 @@
-[rhel8]
-rhel84-node1
-rhel84-node2
-rhel84-node3
+rhel8:
+  hosts:
+    rhel84-node1:
+    rhel84-node2:
+    rhel84-node3:
 
-[rhel7]
-rhel79-node1
+rhel7:
+  hosts:
+    rhel79-node1:
