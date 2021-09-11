@@ -1,0 +1,7 @@
+[rhel8]
+rhel84-node1
+rhel84-node2
+rhel84-node3
+
+[rhel7]
+rhel79-node1
