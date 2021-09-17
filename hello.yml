@@ -4,6 +4,6 @@
   hosts: all
   gather_facts: no
   tasks:
-    - name: use debug say hello
+    - name: use debug say hello.
       debug:
         msg: "hello from {{inventory_hostname}}"
