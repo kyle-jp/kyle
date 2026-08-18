@@ -1,6 +1,6 @@
 ---
 - name: AWX First Test
-  hosts: all
+  hosts: "{{ target_host }}"
   become: true
   tasks:
     - name: Show hostname
