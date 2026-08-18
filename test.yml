@@ -1,0 +1,27 @@
+---
+- name: AWX First Test
+  hosts: all
+  become: true
+  tasks:
+    - name: Show hostname
+      command:
+        cmd: hostname
+      register: hostname_result
+
+    - name: Display hostname
+      debug:
+        msg: "The remote hostname is {{ hostname_result.stdout }}"
+
+    - name: Create AWX test file
+      file:
+        path: /tmp/awx-test.txt
+        state: touch
+        mode: '0644'
+
+    - name: Write test message
+      copy:
+        content: |
+          Hello from AWX!
+          This file was created by Ansible.
+        dest: /tmp/awx-test.txt
+        mode: '0644'
